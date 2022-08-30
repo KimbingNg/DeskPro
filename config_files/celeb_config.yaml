@@ -1,0 +1,17 @@
+data_test: celeb
+data_train: celeb
+
+batchimage: 6
+batchtest: 64
+batchid: 5
+gpus: ()
+larger_fc_lr: False
+
+feats: 512
+height: 384
+width: 128
+loss: 1*CrossEntropy+1*Triplet
+lr: 0.0006
+nThread: 4
+optimizer: ADAM
+tag: ''

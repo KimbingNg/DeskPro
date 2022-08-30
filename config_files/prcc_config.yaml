@@ -1,0 +1,16 @@
+batchimage: 8
+batchtest: 32
+batchid: 13
+larger_fc_lr: False
+
+data_test: prcc_lr_hr_mask
+data_train: prcc_lr_hr_mask
+
+epochs: 140
+feats: 512
+height: 384
+width: 128
+loss: 1*CrossEntropy+1*MSLoss
+lr: 0.0006
+nThread: 4
+optimizer: ADAM

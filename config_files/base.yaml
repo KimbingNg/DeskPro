@@ -1,0 +1,64 @@
+epochs: 140
+batchid: 13
+batchimage: 8
+batchtest: 64
+config: ''
+cosine_annealing: false
+data_test: ''
+data_train: ''
+feats: 512
+gamma: 0.1
+height: 384
+if_labelsmooth: true
+loss: 1*CrossEntropy+1*Triplet
+lr: 0.0006
+margin: 0.7
+momentum: 0.9
+gpus: []
+nThread: 2
+num_classes: 751
+optimizer: ADAM
+pool: avg
+probability: 0.5
+random_erasing: true
+sampler: true
+w_cosine_annealing: true
+w_ratio: 1.0
+warmup: constant
+weight_decay: 0.0005
+width: 128
+pre_train: ''
+tag: ''
+
+larger_fc_lr: False
+forward_mode: body
+
+special_input: True
+head_width: 224
+head_height: 224
+mse:
+  mse_weight: 1.0
+  spatial_attn_lr: 1.0
+kd_loss:
+  enable: False
+  alpha: 0.7
+  beta: 1.0
+  tr_weight: 1.0
+  T: 5.0
+
+dataset_path_cfg:
+  celeb_light:
+    img_dir: 'dataset/celeb-light/imgs'
+    lr_face_dir: 'dataset/celeb-light/lr_face'
+    face_dir: 'dataset/celeb-light/hr_face'
+    clothing_mask_dir: 'dataset/celeb-light/mask'
+  celeb:
+    img_dir: 'dataset/celeb/imgs'
+    lr_face_dir: 'dataset/celeb/lr_face'
+    face_dir: 'dataset/celeb/hr_face'
+    clothing_mask_dir: 'dataset/celeb/mask'
+  prcc:
+    img_dir: 'dataset/prcc/imgs'
+    lr_face_dir: 'dataset/prcc/lr_face'
+    face_dir: 'dataset/prcc/hr_face'
+    clothing_mask_dir: 'dataset/prcc/mask'
